@@ -84,8 +84,8 @@ that no other automation uses it and the replacement has completed a canary.
 
 ## Repository controls
 
-The public `apple-ci` repository uses active default-branch and release-tag
-rulesets, secret scanning, and push protection. Keep `apple-signing` private.
+The public `oh-my-infra/apple-ci` repository uses active default-branch and
+release-tag rulesets, secret scanning, and push protection. Keep `apple-signing` private.
 On the current GitHub plan, rulesets and secret scanning are unavailable for
 that private personal repository; compensate with encrypted-only Match assets,
 readonly-by-default clients, serialized write sessions, and a read-only CI

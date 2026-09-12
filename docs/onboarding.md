@@ -5,7 +5,7 @@ release automation. It does not create an app or Xcode project.
 
 ## Repository defaults
 
-- macOS app: propose `omzcj/<repo>`, public.
+- macOS app: propose `oh-my-brew/<repo>`, public.
 - iOS app: propose `oh-my-app/<repo>`, private.
 - Confirm the owner, name, and visibility before creating a GitHub repository.
 - Apple Developer Team: `566UG6DQ7E`.
@@ -24,9 +24,9 @@ release automation. It does not create an app or Xcode project.
 
 Add a locked Fastlane dependency, `fastlane/Appfile`, `fastlane/Matchfile`, a
 thin `fastlane/Fastfile`, optional `fastlane/capabilities.yml`, and a caller
-workflow. Import the shared Fastfile at an immutable `apple-ci` calendar version
-(`vYYYY.MM.DD.N`) and call the reusable workflow at the corresponding full
-commit SHA.
+workflow. Import the shared Fastfile from `oh-my-infra/apple-ci` at an immutable
+calendar version (`vYYYY.MM.DD.N`) and call the reusable workflow at the
+corresponding full commit SHA.
 
 Publishing tags must be created with `git tag -s`. The shared lane verifies the
 GitHub tag object's cryptographic signature and rejects lightweight, annotated
@@ -49,7 +49,7 @@ Free organization must use repository-level secrets with the same names.
 
 ## Configure secret access for a new repository
 
-For a public `omzcj` repository, do not read or copy secret values. Add the new
+For a public `oh-my-brew` repository, do not read or copy secret values. Add the new
 repository to the selected-repository policy of each existing organization
 secret with the per-repository additive API. Do not replace the existing
 selected-repository list. Afterward, verify that all five secrets preserve the

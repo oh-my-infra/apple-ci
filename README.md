@@ -1,7 +1,7 @@
 # Apple CI
 
-Shared, secret-free signing and release automation for Apple apps owned by
-`omzcj` and `oh-my-app`.
+Shared, secret-free signing and release automation maintained in
+`oh-my-infra/apple-ci` for Apple apps owned by `oh-my-brew` and `oh-my-app`.
 
 This public repository contains:
 
@@ -32,4 +32,17 @@ For tag-triggered publishing, the shared lanes query GitHub's tag object API and
 require a valid cryptographic signature before accessing Match or Apple
 credentials. Annotated but unsigned tags are rejected.
 
-Current release: `v2026.08.30.1`.
+Current release: `v2026.09.12.1`.
+
+## Namespace migration
+
+Consumers use `oh-my-infra/apple-ci` for both the Fastfile import URL and the
+reusable workflow reference. Pin the import to the current signed calendar tag
+and the workflow to its corresponding full commit SHA; GitHub Actions does not
+redirect the former `assassinor/apple-ci` workflow references. Internal Actions
+are pinned to the full commits resolved from their existing major tags.
+
+Homebrew-distributed apps belong to `oh-my-brew`, with the distribution tap at
+`oh-my-brew/tap`. Shared source-release automation lives separately in
+`oh-my-infra/brew-ci`. This namespace migration preserves app Bundle IDs,
+signing identities, and the private `assassinor/apple-signing` repository.
