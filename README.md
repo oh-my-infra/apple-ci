@@ -9,10 +9,9 @@ This public repository contains:
 - shared Fastlane lanes imported by each app repository;
 - an idempotent App Store Connect Bundle ID/capability helper.
 
-The explicit `$apple-release-onboarding` Codex Skill is maintained in the
-private `assassinor/github` workspace repository under `.agents/skills`; this
-public automation repository remains secret-free and contains the human guides
-that the Skill follows.
+Maintenance starts with [AGENTS.md](AGENTS.md) and the guides in this
+repository. The retired private `assassinor/github` workspace is not required
+for onboarding or maintenance; this public repository remains secret-free.
 
 Signing assets are stored separately in the private
 `assassinor/apple-signing` Match repository. Never commit certificates,
@@ -46,3 +45,10 @@ Homebrew-distributed apps belong to `oh-my-brew`, with the distribution tap at
 `oh-my-brew/tap`. Shared source-release automation lives separately in
 `oh-my-infra/brew-ci`. This namespace migration preserves app Bundle IDs,
 signing identities, and the private `assassinor/apple-signing` repository.
+
+## Local maintenance checks
+
+Use [AGENTS.md](AGENTS.md) for change boundaries and `.github/workflows/ci.yml`
+for the check list and prerequisites. Relevant checks include Ruby unit tests,
+Fastlane lane discovery, actionlint, shellcheck and `scripts/check-secrets.sh`.
+Static checks do not authorize a signing operation or release.
