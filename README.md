@@ -9,9 +9,8 @@ This public repository contains:
 - shared Fastlane lanes imported by each app repository;
 - an idempotent App Store Connect Bundle ID/capability helper.
 
-Maintenance starts with [AGENTS.md](AGENTS.md) and the guides in this
-repository. The retired private `assassinor/github` workspace is not required
-for onboarding or maintenance; this public repository remains secret-free.
+Maintenance starts with [AGENTS.md](AGENTS.md) and this repository’s onboarding
+and credential guides. This public repository remains secret-free.
 
 Signing assets are stored separately in the private
 `assassinor/apple-signing` Match repository. Never commit certificates,

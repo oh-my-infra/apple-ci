@@ -4,7 +4,6 @@
 
 - Read `README.md`, `docs/onboarding.md`, `docs/credentials.md`, and the workflow or Fastlane lane being changed. Check Git status and preserve concurrent edits; do not reset, clean, stash, force-push, or switch branches without instruction.
 - This public repository owns reusable Apple signing/release workflows, shared Fastlane lanes, and the Bundle ID/capability helper. App behavior, app-side triggers and release approval belong to the caller repository.
-- Repository guides are the maintenance entry point. Do not require the retired private `assassinor/github` workspace or copy its skills here.
 
 ## Contracts and credentials
 
